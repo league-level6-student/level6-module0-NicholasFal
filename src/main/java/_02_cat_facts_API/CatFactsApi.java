@@ -38,7 +38,6 @@ public class CatFactsApi {
 
         //Collect the response from the Mono object
 
-
         /*
         Print out the actual JSON response -
         this is what you will input into jsonschema2pojo.com
@@ -61,11 +60,12 @@ public class CatFactsApi {
 
         //Make the request, saving the response in an object of the type that you just created in your
         //data_transfer_objects package (CatWrapper)
-    	
+    	Mono<CatWrapper> catMono = webClient.get().retrieve().bodyToMono(CatWrapper.class);
         //Use block() to collect the response into a java object using the class you just created
-    	
+    	CatWrapper response = catMono.block();
+    	String responseStr = response.getData().get(0);
         //return the Object
-        return null;
+        return responseStr;
 
 
     }
