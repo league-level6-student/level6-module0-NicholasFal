@@ -43,8 +43,7 @@ public class JeopardyApi {
     			.build()).retrieve().bodyToMono(Clue[].class);
     	Clue[] response = monoS.block();
     	
-    	//int[] test = {...};
-    	//test.length
+    	
         //2
         //Get a random number less than the size of the Clue array
     	Random ran = new Random();

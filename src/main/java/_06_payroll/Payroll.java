@@ -17,5 +17,6 @@ public class Payroll {
     public String createOfferLetter(String employeeName, double hourlyWage){
         return "Hello " + employeeName + ", We are pleased to offer you an hourly wage of " + hourlyWage;
     }
-
 }
+
+	
