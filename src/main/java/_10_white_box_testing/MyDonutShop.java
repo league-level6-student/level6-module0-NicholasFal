@@ -21,7 +21,7 @@ import java.util.List;
 
 public class MyDonutShop {
 
-    private boolean openForBusiness;
+    public boolean openForBusiness;
 
     private List<Order> orders = new ArrayList<>();
 
